@@ -20,16 +20,16 @@ int main()
     int n;
     std::cout << "Введите x,n" << std::endl;
     std::cin >> x >> n;
-    while (std::cin.fail())
+    while (std::cin.fail() || n<0)
     {
         std::cin.clear();
-        std::cout << "Введите числа x,n верно!" << std::endl;
+        std::cout << "Введите числа x,n верно!(n не может быть ниже 0)" << std::endl;
         std::cin.ignore(std::numeric_limits < std::streamsize >::max(), '\n');
         std::cin >> x >> n;
     }
    
    
-    std::cout << f(x, n) << std::endl;
+    std::cout <<"Ответ: " << f(x, n) << std::endl;
 
 
     
